@@ -382,3 +382,30 @@ body.lock {
         margin-right: 45px;
     }
 }
+
+.onewindow {
+    padding: 60px 0;
+    &__wrapper {
+        text-align: center;
+    }
+    &__title {
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    &__description {
+        display: block;
+        max-width: 1040px;
+        margin: 0 auto 40px auto;
+        font-size: 18px;
+    }
+    &__image {
+        max-width: 1240px;
+        width: 100%;
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+.wrapper {}
