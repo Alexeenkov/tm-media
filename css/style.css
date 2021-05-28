@@ -127,6 +127,13 @@ button {
 .header__list {
   display: flex;
 }
+.header__item a {
+  transition: all 0.3s ease;
+}
+.header__item a:hover {
+  transition: all 0.3s ease;
+  color: #0069E5;
+}
 .header__item:nth-child(n+2) {
   margin-left: 50px;
 }
@@ -150,10 +157,20 @@ button {
 }
 .header__phone-link {
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+.header__phone-link:hover {
+  transition: all 0.3s ease;
+  color: #0069E5;
 }
 .header__call {
   font-size: 13px;
   margin-top: 5px;
+  transition: all 0.3s ease;
+}
+.header__call:hover {
+  transition: all 0.3s ease;
+  color: #0069E5;
 }
 
 .mobile-show {
@@ -248,6 +265,12 @@ button {
   background-color: #006B8F;
   color: #fff;
   border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.face__button:hover {
+  transition: all 0.3s ease;
+  background-color: #0069E5;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);
 }
 .face__image {
   position: relative;
@@ -303,6 +326,12 @@ button {
   min-width: 292px;
   height: 48px;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+.quality__button:hover {
+  transition: all 0.3s ease;
+  background-color: #fcda17;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .tools {
@@ -636,6 +665,11 @@ button {
   font-family: inherit;
   border-radius: 4px;
   margin-top: 30px;
+  transition: all 0.3s ease;
+}
+.footer__button:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);
 }
 
 .form__input {

@@ -138,6 +138,13 @@ button {
         display: flex;
     }
     &__item {
+        & a {
+            transition: all .3s ease;
+            &:hover {
+                transition: all .3s ease;
+                color: #0069E5;
+            }
+        }
         &:nth-child(n+2) {
             margin-left: 50px;
         }
@@ -162,10 +169,20 @@ button {
     }
     &__phone-link {
         font-size: 14px;
+        transition: all .3s ease;
+        &:hover {
+            transition: all .3s ease;
+            color: #0069E5;
+        }
     }
     &__call {
         font-size: 13px;
         margin-top: 5px;
+        transition: all .3s ease;
+        &:hover {
+            transition: all .3s ease;
+            color: #0069E5;
+        }
     }
 }
 
@@ -282,6 +299,12 @@ button {
         background-color: #006B8F;
         color: #fff;
         border-radius: 4px;
+        transition: all .3s ease;
+        &:hover {
+            transition: all .3s ease;
+            background-color: #0069E5;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);
+        }
     }
     &__image {
         position: relative;
@@ -338,6 +361,12 @@ button {
         min-width: 292px;
         height: 48px;
         font-weight: 500;
+        transition: all .3s ease;
+        &:hover {
+            transition: all .3s ease;
+            background-color: #fcda17;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
     }
 }
 
@@ -689,6 +718,11 @@ button {
         font-family: inherit;
         border-radius: 4px;
         margin-top: 30px;
+        transition: all .3s ease;
+        &:hover {
+            transition: all .3s ease;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);
+        }
     }
 }
 
