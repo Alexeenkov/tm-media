@@ -1,0 +1,217 @@
+/* ! ------------------------fonts-------------------- */
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/Formular-Light.woff2") format("woff2"), url("../fonts/Formular-Light.woff") format("woff"), url("../fonts/Formular-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/Formular.woff2") format("woff2"), url("../fonts/Formular.woff") format("woff"), url("../fonts/Formular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formular";
+  src: local("../fonts/Formular Medium"), local("../fonts/Formular-Medium"), url("../fonts/Formular-Medium.woff2") format("woff2"), url("../fonts/Formular-Medium.woff") format("woff"), url("../fonts/Formular-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/Formular-Bold.woff2") format("woff2"), url("../fonts/Formular-Bold.woff") format("woff"), url("../fonts/Formular-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* ! -------------------reset-styles------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* ! ------------------------body-------------------- */
+html,
+body {
+  min-width: 320px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Formular", "Arial", "Helvetica", sans-serif;
+  color: #253640;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+/* ! ----------------------- MAIN ------------------------ */
+.wrapper {
+  max-width: 1240px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #f5f5f5;
+  z-index: 10;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  flex-shrink: 0;
+  max-width: 250px;
+  margin-right: 50px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.header__list {
+  display: flex;
+}
+.header__item:nth-child(n+2) {
+  margin-left: 50px;
+}
+.header__phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+.header__phone::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -46px;
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/phone.svg");
+  background-size: contain;
+}
+.header__phone-link {
+  font-size: 14px;
+}
+.header__call {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.face {
+  background-color: #f5f5f5;
+}
+.face__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+}
+.face__content {
+  padding: 40px 0;
+}
+.face__title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: 18px;
+  color: #000;
+}
+.face__subtitle {
+  font-size: 20px;
+  color: #253640;
+  margin-bottom: 70px;
+}
+.face__subtitle p:nth-child(n+2) {
+  margin-top: 7px;
+}
+.face__description {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.57;
+  margin-bottom: 50px;
+}
+.face__description::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 55px;
+  height: 2px;
+  background-color: #d5d5d5;
+}
+.face__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 60px;
+  background-color: #006B8F;
+  color: #fff;
+  border-radius: 4px;
+}
+.face__image {
+  position: relative;
+  right: -3.63%;
+  width: 78%;
+}
+.face__image img {
+  width: 100%;
+}
