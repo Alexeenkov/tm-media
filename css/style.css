@@ -418,3 +418,26 @@ body.lock {
 .profit__video video {
   width: 100%;
 }
+
+.clients {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+.clients__title {
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto 40px auto;
+}
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients__item {
+  max-width: 136px;
+  max-height: 49px;
+}
+.clients__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
