@@ -386,3 +386,35 @@ body.lock {
 .onewindow__image img {
   width: 100%;
 }
+
+.profit {
+  padding: 60px 0;
+}
+.profit__wrapper {
+  display: flex;
+}
+.profit__content {
+  max-width: 600px;
+}
+.profit__title {
+  font-size: 52px;
+  margin-bottom: 32px;
+  line-height: 1.15;
+}
+.profit__description {
+  font-size: 18px;
+}
+.profit__button {
+  margin: 40px auto 15px auto;
+}
+.profit__sign {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+}
+.profit__video {
+  max-width: 670px;
+}
+.profit__video video {
+  width: 100%;
+}

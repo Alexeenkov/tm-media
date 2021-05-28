@@ -408,4 +408,34 @@ body.lock {
     }
 }
 
-.wrapper {}
+.profit {
+    padding: 60px 0;
+    &__wrapper {
+        display: flex;
+    }
+    &__content {
+        max-width: 600px;
+    }
+    &__title {
+        font-size: 52px;
+        margin-bottom: 32px;
+        line-height: 1.15;
+    }
+    &__description {
+        font-size: 18px;
+    }
+    &__button {
+        margin: 40px auto 15px auto;
+    }
+    &__sign {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+    }
+    &__video {
+        max-width: 670px;
+        & video {
+            width: 100%;
+        }
+    }
+}
