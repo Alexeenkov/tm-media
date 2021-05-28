@@ -287,6 +287,7 @@ body.lock {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 40px;
+  line-height: 1.17;
 }
 .tools__list {
   font-size: 18px;
@@ -316,4 +317,47 @@ body.lock {
 .tools__image_box-shadow {
   box-shadow: 0 -10px 85px -45px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
+}
+
+.cost {
+  padding: 90px 0 80px 0;
+  background-color: #f5f5f5;
+}
+.cost__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.cost__container:first-child {
+  margin-right: 65px;
+}
+.cost__container:last-child {
+  max-width: 430px;
+}
+.cost__title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.48;
+  margin-bottom: 25px;
+}
+.cost__text {
+  font-size: 18px;
+}
+.cost__description {
+  font-size: 20px;
+  margin-top: 60px;
+  max-width: 490px;
+}
+.cost__item {
+  display: flex;
+}
+.cost__item:nth-child(n+2) {
+  margin-top: 35px;
+}
+.cost__image {
+  background-color: #cce1e9;
+  border-radius: 20px;
+  width: 65px;
+  height: 65px;
+  padding: 18px;
+  margin-right: 45px;
 }
