@@ -104,6 +104,11 @@ body.lock {
     margin: 0 auto;
 }
 
+.title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -232,11 +237,101 @@ body.lock {
 }
 
 .quality {
-    &__title {}
+    margin-top: 60px;
+    padding-bottom: 70px;
+    &__wrapper {
+        position: relative;
+    }
+    &__title {
+        margin-bottom: 80px;
+    }
     &__content {}
-    &__list {}
-    &__item {}
-    &__image {}
-    &__text {}
-    &__button {}
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 21%;
+        margin-right: 18.5%;
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+        &:nth-child(n+4) {
+            margin-top: 100px;
+        }
+    }
+    &__image {
+        margin-right: 20px;
+    }
+    &__text {
+        font-size: 18px;
+    }
+    &__button {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2c400;
+        font-size: 18px;
+        border-radius: 4px;
+        min-width: 292px;
+        height: 48px;
+        font-weight: 500;
+    }
+}
+
+.tools {
+    padding: 50px 0;
+    &__wrapper {}
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+    &__text {
+        flex-shrink: 0;
+        &_max-width {
+            max-width: 463px;
+        }
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    &__list {
+        font-size: 18px;
+    }
+    &__item {
+        &:nth-child(n+2) {
+            margin-top: 25px;
+        }
+        &::before {
+            content: '—';
+            margin-right: 7px;
+        }
+    }
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        &:nth-child(n+2) {
+            margin-left: 30px;
+        }
+        &:first-child {
+            margin-right: 50px;
+        }
+        & img {
+            width: 100%;
+        }
+        &_box-shadow {
+            box-shadow: 0 -10px 85px -45px rgb(0 0 0 / 50%);
+            border-radius: 15px;
+        }
+    }
 }
