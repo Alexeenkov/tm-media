@@ -1,17 +1,25 @@
-//? Плавный скролл до разделов
-const anchors = document.querySelectorAll('a[href*="#"]')
+//? Бургер-меню + плавный скролл до разделов
+const burger = document.querySelector('.burger');
+const burgerIcon = document.querySelector('.burger__icon');
+const menu = document.querySelector('.header__menu');
+const menuLinks = document.querySelectorAll('.header__item a');
 
-for (let anchor of anchors) {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault()
+burger.addEventListener('click', () => {
+    burgerIcon.classList.toggle('active');
+    menu.classList.toggle('active');
+});
 
-        const blockID = anchor.getAttribute('href').substr(1)
-
+for (let link of menuLinks) {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        burgerIcon.classList.remove('active');
+        menu.classList.remove('active');
+        const blockID = link.getAttribute('href').substr(1);
         document.getElementById(blockID).scrollIntoView({
             behavior: 'smooth',
             block: 'start'
-        })
-    })
+        });
+    });
 }
 
 //? Форма обратной связи
