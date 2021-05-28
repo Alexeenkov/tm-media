@@ -562,6 +562,9 @@ body.lock {
         flex-direction: column;
         width: 50%;
         padding: 0 45px;
+        &:nth-child(2n+1) {
+            border-right: 1px solid #F6F6F6;
+        }
     }
     &__header {
         display: flex;
@@ -584,5 +587,87 @@ body.lock {
     &__site {
         flex-shrink: 0;
         font-size: 13px;
+    }
+}
+
+.footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    background-color: #006b8f;
+    color: #fff;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__container {
+        &:first-child {
+            margin-right: 50px;
+            flex-grow: 1;
+        }
+        &:last-child {
+            max-width: 500px;
+        }
+    }
+    &__title {}
+    &__image {}
+    &__subtitle {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        & span {
+            font-weight: 700;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        font-size: 16px;
+        font-family: inherit;
+        border-radius: 4px;
+        margin-top: 30px;
+    }
+}
+
+.form {
+    &__name {}
+    &__tel {}
+    &__input {
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        border-radius: 6px;
+        border: 0;
+        background: #197a9a;
+        color: #fff;
+        margin-bottom: 13px;
+        height: 48px;
+        font-size: 16px;
+        font-family: inherit;
+        &:focus {
+            outline: none;
+        }
+        &::-webkit-input-placeholder {
+            color: inherit;
+        }
+        &::-moz-placeholder {
+            color: inherit;
+        }
+        &:-ms-input-placeholder {
+            color: inherit;
+        }
+        &::-ms-input-placeholder {
+            color: inherit;
+        }
+        &::placeholder {
+            color: inherit;
+        }
     }
 }
