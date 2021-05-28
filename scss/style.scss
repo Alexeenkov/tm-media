@@ -169,6 +169,66 @@ button {
     }
 }
 
+.mobile-show {
+    display: none;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 200px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 100%);
+    position: absolute;
+    left: -120px;
+    top: -50px;
+    z-index: 1;
+    transform: rotate(45deg);
+    -webkit-animation-name: slideme;
+    animation-name: slideme;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes slideme {
+    0% {
+        left: -110px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 60px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 60px;
+    }
+}
+
+@keyframes slideme {
+    0% {
+        left: -110px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 60px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 60px;
+    }
+}
+
 .face {
     background-color: #f5f5f5;
     &__wrapper {
@@ -971,6 +1031,17 @@ button {
     .header {
         &__phone {
             display: none;
+            margin-top: 100px;
+            &::before {
+                display: none;
+            }
+        }
+        &__phone-link {
+            font-size: 20px;
+        }
+        &__call {
+            margin-top: 30px;
+            font-size: 18px;
         }
         &__menu {
             max-width: 100%;
@@ -1081,5 +1152,9 @@ button {
         &__subtitle {
             text-align: center;
         }
+    }
+    .mobile-show {
+        display: flex;
+        align-items: center;
     }
 }

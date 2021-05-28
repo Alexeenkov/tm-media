@@ -156,6 +156,45 @@ button {
   margin-top: 5px;
 }
 
+.mobile-show {
+  display: none;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 200px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 100%);
+  position: absolute;
+  left: -120px;
+  top: -50px;
+  z-index: 1;
+  transform: rotate(45deg);
+  animation-name: slideme;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes slideme {
+  0% {
+    left: -110px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 110%;
+    margin-left: 60px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 60px;
+  }
+}
 .face {
   background-color: #f5f5f5;
 }
@@ -893,6 +932,17 @@ button {
 @media (max-width: 550px) {
   .header__phone {
     display: none;
+    margin-top: 100px;
+  }
+  .header__phone::before {
+    display: none;
+  }
+  .header__phone-link {
+    font-size: 20px;
+  }
+  .header__call {
+    margin-top: 30px;
+    font-size: 18px;
   }
   .header__menu {
     max-width: 100%;
@@ -995,5 +1045,10 @@ button {
   }
   .footer__subtitle {
     text-align: center;
+  }
+
+  .mobile-show {
+    display: flex;
+    align-items: center;
   }
 }
