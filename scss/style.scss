@@ -61,7 +61,10 @@ body {
     font-style: normal;
     font-family: "Formular", "Arial", "Helvetica", sans-serif;
     color: #253640;
-    overflow-x: hidden;
+}
+
+body.lock {
+    overflow: hidden;
 }
 
 button {
@@ -748,6 +751,160 @@ button {
     }
 }
 
+// ! ================================================
+// ! ===================== ПОПАП ====================
+// ! ================================================
+.popup {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 42px 15px;
+    width: 100vw;
+    min-width: 320px;
+    height: 100vh;
+    background-color: rgba(00, 00, 00, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 1s ease 0s;
+    color: #fff;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.open .popup__content {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content {
+        position: relative;
+        background-color: #006B8F;
+        transition: all 1s ease 0s;
+        opacity: 0;
+        padding: 43px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 560px;
+        transform: perspective(600px) translateY(-200%) rotateX(45deg);
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 217px;
+            height: 217px;
+            border-radius: 100%;
+            background: linear-gradient( 147.31deg, rgba(255, 255, 255, 0.17) 45.74%, rgba(230, 230, 230, 0) 86.05%);
+            opacity: .2;
+            top: 27px;
+            left: 27px;
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: unset;
+        background-image: url("../img/form-x.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        border-radius: 6px;
+        border: 0;
+        background: #197a9a;
+        color: #fff;
+        box-shadow: none !important;
+        margin-bottom: 13px;
+        height: 48px;
+        width: 100%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: inherit;
+        &::-webkit-input-placeholder {
+            color: inherit;
+            font-size: 16px;
+        }
+        &::-moz-placeholder {
+            color: inherit;
+            font-size: 16px;
+        }
+        &:-ms-input-placeholder {
+            color: inherit;
+            font-size: 16px;
+        }
+        &::-ms-input-placeholder {
+            color: inherit;
+            font-size: 16px;
+        }
+        &::placeholder {
+            color: inherit;
+            font-size: 16px;
+        }
+        &:focus {
+            outline: none;
+            border: 1px solid #2742d6;
+        }
+    }
+    &__name {}
+    &__tel {
+        margin-top: 20px;
+    }
+    &__email {
+        margin-top: 20px;
+    }
+    &__button {
+        margin: 20px auto 0 auto;
+        width: 100%;
+        max-width: 390px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        font-size: 16px;
+        font-family: inherit;
+        border-radius: 4px;
+        margin-top: 30px;
+        transition: all .3s ease;
+        &:hover {
+            transition: all .3s ease;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);
+        }
+    }
+}
+
+// ! ================================================
+// ! ===================== АДАПТИВ ==================
+// ! ================================================
 @media (max-width: 1120px) {
     .header {
         &__logo {
@@ -1174,5 +1331,20 @@ button {
     .mobile-show {
         display: flex;
         align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .popup {
+        &__content {
+            padding: 43px 20px;
+        }
+        &__title {
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+        &__input {
+            margin-bottom: 0;
+        }
     }
 }

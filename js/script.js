@@ -24,7 +24,7 @@ for (let link of menuLinks) {
 
 //? Форма обратной связи
 const popupLinks = document.querySelectorAll('.popup-link');
-const body1 = document.querySelector('body');
+const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;
@@ -91,8 +91,8 @@ function bodyLock() {
             el.style.paddingRight = lockPaddingValue;
         }
     }
-    body1.style.paddingRight = lockPaddingValue;
-    body1.classList.add('lock');
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('lock');
 
     unlock = false;
     setTimeout(function() {
@@ -108,8 +108,8 @@ function bodyUnLock() {
                 el.style.paddingRight = '0px';
             }
         }
-        body1.style.paddingRight = '0px';
-        body1.classList.remove('lock');
+        body.style.paddingRight = '0px';
+        body.classList.remove('lock');
     }, timeout);
 
     unlock = false;

@@ -76,7 +76,7 @@
                     <li class="face__item">Точность данных 99%. <br> 80+ показателей</li>
                     <li class="face__item">Ежемесячные отчеты <br> До 68% экономия бюджета</li>
                 </ul>
-                <a href="#0" class="face__button button"> Оставить заявку </a>
+                <a href="#popup" class="face__button button popup-link"> Оставить заявку </a>
             </div>
             <div class="face__image">
                 <img src="img/main-pic.svg" alt="Управление маркетингом в одном окне">
@@ -111,7 +111,7 @@
                         <div class="quality__text">Получайте больше продаж</div>
                     </li>
                 </ul>
-                <a href="#0" class="quality__button button">Оставить заявку</a>
+                <a href="#popup" class="quality__button button popup-link">Оставить заявку</a>
             </div>
         </div>
     </div>
@@ -217,7 +217,7 @@
             <div class="profit__content">
                 <h2 class="title profit__title">Помогаем получить максимум прибыли от рекламы</h2>
                 <span class="profit__description">Roistat — маркетинговая платформа, которая помогает привлекать больше трафика, увеличивать конверсию в заявки, повышать продажи и лояльность клиентов</span>
-                <a href="#0" class="face__button profit__button button">Оставить заявку</a>
+                <a href="#popup" class="face__button profit__button button popup-link">Оставить заявку</a>
                 <span class="profit__sign">Перезвоним в течение 5 минут</span>
             </div>
             <div class="profit__video">
@@ -343,15 +343,30 @@
             </div>
             <div class="footer__container">
                 <div class="footer__subtitle"><span>Получите подробную консультацию специалиста</span> <br> по возможностям инструментов сквозной аналитики</div>
-                <form action="#" class="footer__form">
-                    <input type="text" class="form__name form__input" placeholder="Введите имя">
-                    <input type="text" class="form__tel form__input" placeholder="Введите телефон">
-                    <button class="footer__button button">Получить консультацию</button>
+                <form action="sendmail-2.php" method="POST" class="footer__form">
+                    <input type="text" name="name-2" class="form__name form__input" placeholder="Введите имя" required>
+                    <input type="tel" name="tel-2" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="form__tel form__input" placeholder="Введите телефон" required>
+                    <button type="submit" class="footer__button button">Получить консультацию</button>
                 </form>
             </div>
         </div>
     </footer>
-
+    <aside class="popup" id="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <button type="button" class="popup__close">
+					<span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
+				</button>
+                <h4 class="popup__title">Напишите свое имя и телефон и мы Вам перезвоним</h4>
+                <form action="sendmail.php" method="POST" class="popup__form">
+                    <input type="text" name="name" class="popup__input popup__name" placeholder="Введите имя" required>
+                    <input type="email" name="email" class="popup__input popup__email" placeholder="Введите email" required>
+                    <input type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup__input popup__tel" placeholder="Введите телефон" required>
+                    <button type="submit" class="button popup__button">Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+    </aside>
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
