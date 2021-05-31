@@ -1,4 +1,5 @@
 //? Бургер-меню + плавный скролл до разделов
+
 const burger = document.querySelector('.burger');
 const burgerIcon = document.querySelector('.burger__icon');
 const menu = document.querySelector('.header__menu');
@@ -18,7 +19,6 @@ for (let link of menuLinks) {
     });
 }
 
-// ? 
 function scrollToItem(event) {
     const menuLink = event.target;
     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {

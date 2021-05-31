@@ -37,16 +37,6 @@ img {
   vertical-align: top;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-
 /* ! ------------------------body-------------------- */
 html,
 body {
@@ -87,6 +77,16 @@ button {
 
 .burger {
   display: none;
+}
+
+._scroll {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+._scroll._active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .header {
@@ -217,11 +217,11 @@ button {
   padding: 40px 0;
 }
 .face__title {
-  font-size: 45px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 1.22;
   margin-bottom: 18px;
-  color: #000;
+  letter-spacing: 1px;
 }
 .face__subtitle {
   font-size: 20px;
@@ -328,7 +328,7 @@ button {
 }
 
 .tools {
-  padding: 70px 0 100px 0;
+  padding: 70px 0 20px 0;
 }
 .tools__content {
   display: flex;
