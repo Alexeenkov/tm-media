@@ -14,12 +14,21 @@ for (let link of menuLinks) {
         event.preventDefault();
         burgerIcon.classList.remove('active');
         menu.classList.remove('active');
-        const blockID = link.getAttribute('href').substr(1);
-        document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        scrollToItem(event);
     });
+}
+
+// ? 
+function scrollToItem(event) {
+    const menuLink = event.target;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+        const gotoBlock = document.querySelector(menuLink.dataset.goto);
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+        window.scrollTo({
+            top: gotoBlockValue,
+            behavior: "smooth"
+        })
+    }
 }
 
 //? Форма обратной связи
